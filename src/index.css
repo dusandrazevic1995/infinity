@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0502] text-[#e0d8d0] font-sans overflow-hidden;
+  }
+}
+
+.atmosphere {
+  background: 
+    radial-gradient(circle at 50% 30%, #3a1510 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, #ff4e00 0%, transparent 50%);
+  filter: blur(80px);
+  opacity: 0.4;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl;
+}
+
+.markdown-body p {
+  @apply mb-4 leading-relaxed text-lg;
+}
+
+.markdown-body h1, .markdown-body h2 {
+  @apply font-serif italic text-3xl mb-4 text-white;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.choice-btn {
+  @apply w-full text-left p-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 flex items-center gap-4;
+}
+
+.choice-btn:hover {
+  @apply border-orange-500/50 translate-x-1;
+}
+
+.choice-number {
+  @apply font-serif italic text-orange-500/50 group-hover:text-orange-500;
+}
